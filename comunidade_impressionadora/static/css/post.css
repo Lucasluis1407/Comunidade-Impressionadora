@@ -1,0 +1,575 @@
+/*======= VERSÃO PARA DESKTOP ================*/
+
+.container-pots {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#post-block {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+    width: 1300px;
+    
+
+    
+    background-color: #f2f5f8;
+}
+
+#post-coluna1 {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-top: -120px;
+
+    margin-right: 50px;
+
+    
+    width: 330px;
+}
+
+#cursos-autor-post {
+    width: 330px;
+
+    margin-left: -25px;
+}
+
+#post-coluna2 {
+    display: flex;
+    flex-direction: column;
+
+    align-items:center;
+    
+
+    
+    width: 720px;
+    
+}
+
+#foto-autor-post {
+    display: inline-block;
+    width: 80px;
+    border-radius: 50%;
+
+    margin-left: -25px;
+    
+}
+
+#nome-autor-post {
+
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: -55px;
+    margin-left: 65px;
+    margin-bottom: 40px;
+
+    text-align: start;
+}
+
+#autor-cursos {
+    display: flex;
+
+    flex-direction: column;
+
+    font-size: 18px;
+
+    width: 295px;
+    height: 30px;
+
+    justify-content: center;
+
+    align-items: center;
+
+    
+
+
+    background-color: rgb(93, 226, 137);
+    border-radius: 40px;
+    padding: 5px;
+}
+
+#titulo-post {
+    
+    color :orange;
+
+    font-weight: bold;
+    font-size: 35px;
+    
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    text-align: justify;
+
+    border-bottom: 2px solid orange
+}
+
+#image-post {
+    
+    width: 830px;
+   
+    border-radius: 20px;
+    
+}
+
+#texto-post {
+
+    
+    text-align: justify;
+
+    font-size: 18px;
+    
+}
+
+#edit-post {
+      
+    display: inline-block;
+
+    
+    
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+
+    
+
+    background-color: blue;
+    padding: 7px;
+    border-radius: 10px;
+
+    text-align: center;
+
+    margin-bottom: 5px;
+}
+
+
+#excluir-post {
+    text-align: center;
+
+    display: inline-block;
+
+    font-size: 25px; 
+    text-decoration: none;
+    color: white;
+    margin-top: -21px;
+
+    background-color: red;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+
+/* COMENTARIOS */
+
+
+
+
+#container-comentarios {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#coment-block {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 15px;
+    
+    width: 1300px;
+
+    
+    margin-top: 20px;
+    border-radius: 10%;
+
+    
+    background-color: #f2f5f8;
+}
+
+#coment-coluna1 {
+    display: flex;
+
+    
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+
+    margin-bottom: 15px;
+}
+
+#coment-coluna2 {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+
+  
+    margin-top: 35px;
+    width: 900px;
+}
+
+#foto-coment-autor {
+    display: inline-block;
+    width: 80px;
+    border-radius: 50%;
+
+    margin-left: -10px;
+}
+
+#nome-coment-autor {
+    
+    margin-left: 15px;
+
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#data-coment {
+    
+    margin-left: 120px;
+
+    font-size: 18px;
+}
+
+#corpo-comentario {
+
+    
+    font-size: 18px;
+    
+}
+
+
+#edit-coment {
+    
+    margin-left: -25px;
+    
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+
+    margin-top: -30px;
+
+    background-color: blue;
+    padding: 7px;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+#excluir-coment {
+    text-align: center;
+
+    margin-left: 310px;
+    
+    font-size: 18px; 
+    text-decoration: none;
+    color: white;
+    margin-top: -41px;
+
+    background-color: red;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+/*======= VERSÃO PARA MOBILE ================*/
+
+@media (max-width: 450px) {
+
+    body {
+        display: initial;
+        width: initial;
+        justify-content: initial;
+        margin: initial;
+    }
+
+
+    .container-pots {
+        display: flex;
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    #post-block {
+        display: flex;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        max-width: 350px;
+        
+   
+        
+        background-color: #f2f5f8;
+    }
+
+    #post-coluna1 {
+        width: 390px;
+        
+        display: flex;
+
+        flex-direction: column;
+
+        margin-top: -15px;
+    }
+
+    #cursos-autor-post {
+        width: 330px;
+
+        margin-left: -25px;
+    }
+
+    #post-coluna2 {
+        display: flex;
+        
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+
+        margin-left: -50px;
+
+        width: 390px;
+
+        
+    }
+
+    #foto-autor-post {
+        display: inline-block;
+        width: 50px;
+        border-radius: 50%;
+
+        margin-left: -25px;
+        
+    }
+
+    #nome-autor-post {
+
+        font-size: 17px;
+        font-weight: bold;
+        margin-top: -35px;
+        margin-left: 35px;
+        margin-bottom: 20px;
+
+        text-align: start;
+    }
+
+    #autor-cursos {
+        display: inline;
+    
+        font-size: 10px;
+    
+        height: 40px;
+  
+
+        background-color: rgb(93, 226, 137);
+        border-radius: 40px;
+        padding: 5px;
+    }
+
+    #titulo-post {
+        
+        width: 300px;
+        font-weight: bold;
+        font-size: 18px;
+        
+        margin-top: 40px;
+        margin-bottom: -21px;
+
+        text-align: justify;
+
+        border-bottom: 2px solid rgb(93, 226, 137)
+    }
+
+    #image-post {
+        
+        width: 330px;
+       
+        border-radius: 20px;
+        
+    }
+
+    #texto-post {
+        margin-top: -15px;
+        
+        text-align: justify;
+
+        font-size: 13px;
+        
+    }
+
+    #edit-post {
+          
+        display: inline-block;
+
+        width: 125px;
+        font-size: 13px;
+        text-decoration: none;
+        color: white;
+
+        margin-top: -30px;
+
+        background-color: blue;
+        padding: 1px;
+        border-radius: 10px;
+
+        text-align: center;
+
+        margin-bottom: 5px;
+    }
+
+
+    #excluir-post {
+        text-align: center;
+
+        display: inline-block;
+
+        width: 125px;
+        font-size: 13px; 
+        text-decoration: none;
+        color: white;
+        margin-top: -21px;
+
+        background-color: red;
+        padding: 1px;
+        border-radius: 10px;
+    }
+    /* COMENTARIOS */
+
+    #container-comentarios {
+        display: flex;
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #coment-block {
+        display: flex;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        padding: 15px;
+        
+        max-width: 340;
+
+        
+        margin-top: 20px;
+        border-radius: 10%;
+   
+        
+        background-color: #f2f5f8;
+    }
+
+    #coment-coluna1 {
+        display: flex;
+
+        
+        justify-content: center;
+        align-items: center;
+
+        width: 300px;
+        height: 60px;
+
+        margin-bottom: 15px;
+    }
+
+    #coment-coluna2 {
+        display: flex;
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+
+      
+        margin-top: 35px;
+        width: 300px;
+    }
+
+    #foto-coment-autor {
+        display: inline-block;
+        width: 50px;
+        border-radius: 50%;
+
+        margin-left: -10px;
+    }
+
+    #nome-coment-autor {
+        
+        margin-left: 15px;
+
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    #data-coment {
+        
+        margin-left: 120px;
+
+        font-size: 15px;
+    }
+
+    #corpo-comentario {
+
+        
+        font-size: 15px;
+        
+    }
+
+
+    #edit-coment {
+        
+
+
+        margin-left: -65px;
+        width: 125px;
+        font-size: 13px;
+        text-decoration: none;
+        color: white;
+
+        margin-top: -30px;
+
+        background-color: blue;
+        padding: 1px;
+        border-radius: 10px;
+
+        text-align: center;
+    }
+
+    #excluir-coment {
+        text-align: center;
+
+        margin-left: 210px;
+        width: 120px;
+        font-size: 13px; 
+        text-decoration: none;
+        color: white;
+        margin-top: -21px;
+
+        background-color: red;
+        padding: 1px;
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,30 @@
+/*======= VERSÃO PARA DESKTOP ================*/
+
+
+#nav-title {
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+
+
+
+/*======= VERSÃO PARA MOBILE ================*/
+
+@media (max-width: 450px) {
+
+    #nav-title {
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+    }
+
+    #foto-user {
+        position: absolute;
+        margin-top: 30px;
+        margin-left: 80px;
+    }
+}

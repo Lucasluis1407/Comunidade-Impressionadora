@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/perfil.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <div class="container" >
+
+        <div id="usuarios-pageblock">
+
+            <div >
+
+                <div >
+                    <img id="user-fotoperfil" src="{{ fotoPerfilAtual }}" width="205" >
+                </div>
+
+            <div >
+                
+                <h4 id="user-username" >{{ current_user.username }}</h4>
+                <h5 id="user-email" >{{current_user.email }}</h5>
+
+                <div id="information-user">
+
+                    <div >
+
+                        <span >Cursos</span>
+                        {% if 'Não informado' in current_user.cursos %}
+                            <span >0</span>
+                        {% else %}
+                            <span >{{ current_user.cursos.count(';') + 1 }}</span>
+                        {% endif %}
+
+                        
+                        
+                        
+                    </div>
+
+
+
+                    <div >
+
+                        <span >Posts</span>
+                        <span >{{current_user.contarPosts()}}</span>
+                        
+                    </div>
+                    
+                </div>
+
+
+                <div >
+
+                    <a id="edit-user" href="{{url_for('editarPerfil')}}">
+                        <button id="edit-user-button" >Editar Perfil</button>
+                    </a>
+                    
+                </div>
+
+
+            </div>
+
+                
+            </div>
+            
+            
+        
+        
+            <div >
+                <div >
+                    <strong id="titulo-cursos">Cursos</strong><br>
+                    {% for curso in current_user.cursos.split(';') %}
+                        <h5 id="user-cursos">{{ curso }}</h5>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    
+
+    <div class="container-pots">
+        <strong id="posts">Meus Posts</strong><br>
+        {% for post in meus_posts %}
+            <div id="post-block" class=" border mt-4 p-4 rounded-4" style="background-color: #f2f5f8;">
+                        
+                <div id="post-coluna1">
+                    <img id="foto-autor-post" src="{{ url_for('static', filename='fotos_perfil/{}'.format(post.autor.fotoPerfil)) }}" >
+                    <br>
+                    <h4 id="nome-autor-post" class="autor-post" >{{ post.autor.username }}</h4>
+                    <h6 id="data-post"  >{{ post.dataCriacao.strftime('%d/%m/%Y')  }}</h6>
+                    <div>
+
+                        {% for curso in post.autor.cursos.split(';') %}
+                            <h5 id="autor-cursos">{{ curso }}</h5>
+                        {% endfor %}
+        
+                    </div>
+                </div>
+                
+                
+                <div id="post-coluna2" >
+                    <a style="text-decoration: none;" href="{{ url_for('exibirPost', post_id=post.id) }}">
+                        <h3 id="titulo-post">{{ post.titulo }}</h3>
+                    </a>
+                    {% if post.fotoPost: %}
+                        <img id="image-post" src="{{ url_for('static', filename='fotos_posts/{}'.format(post.fotoPost)) }}" >
+                    {% endif %}
+                    <p id="texto-post" >{{ post.corpo }}</p>
+                </div>
+
+            </div>
+        {% endfor %}
+
+{% block formEditarPerfil %}
+{% endblock %}
+
+{% endblock %}

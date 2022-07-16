@@ -1,0 +1,23 @@
+/*======= VERSÃO PARA DESKTOP ================*/
+
+body {
+    background-image: url('https://cdn.discordapp.com/attachments/965066624556232737/997879228131450930/Comunidade_Impressionadora.png');
+
+}
+
+
+
+/*======= VERSÃO PARA MOBILE ================*/
+
+@media (max-width: 450px) {
+    
+
+    body {
+        width: 100%;
+        height: 950px;
+        background-image: url('https://cdn.discordapp.com/attachments/965066624556232737/996060661836697630/capa_mobile.png');
+        background-size: 100vw 950px;
+        background-repeat: no-repeat;
+    }
+    
+}

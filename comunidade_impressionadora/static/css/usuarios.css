@@ -1,0 +1,116 @@
+
+
+/*======= VERSÃO PARA MOBILE ================*/
+
+@media (min-width: 350px) { 
+
+
+    #titulo-page {
+
+        margin-top: 20px;
+        color: orange;
+        font-weight: bold;
+
+        font-size: 35px;
+
+
+    }
+
+    #usuarios-pageblock {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+
+        background-color: #f2f5f8;
+
+        
+        border-radius: 15px;
+
+    }
+
+    #user-fotoperfil {
+        width: 170px;
+        border-radius: 50%;
+
+        align-items: center;
+
+        margin-bottom: 10px;
+    }
+
+    #user-username {
+        font-weight: bold;
+
+       display: flex;
+      
+       justify-content: center;
+
+       margin-left: -10px;
+    }
+
+    #user-email {
+        
+
+        text-align: center;
+
+        
+        
+        font-size: 15px;
+    }
+
+    #information-user {
+        display: flexbox;
+
+        margin-top: 10px;
+        margin-left: 32px;
+        margin-bottom: 10px;
+
+        text-align: center;
+        justify-content: center;
+        
+
+        width: 100px;
+
+        background-color: orange;
+
+        border-radius: 15px;
+
+        
+    }
+
+    #titulo-cursos {
+        display: flex;
+
+        font-size: 18px;
+        margin-left: -15px;
+        justify-content: center;
+
+        margin-bottom: -13px;
+    }
+
+    #user-cursos{
+
+        font-size: 12px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;        
+       
+        width: 200px;
+        height: 40px;
+  
+
+        background-color: rgb(93, 226, 137);
+        border-radius: 40px;
+        padding: 5px;
+
+
+    }
+
+    
+}

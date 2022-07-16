@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <hr>
+        <div class="row">
+            
+            <form method="POST" action="" class="border p-5 mt-2 rounded-4">
+                {{ form.csrf_token }}
+                <legend>Recuperar Senha</legend>
+                <fieldset>
+                    <div class="form-group">
+                        {{ form.email.label(class='form-control-label') }}
+                        {% if form.email.errors %}
+                            {{ form.email(class='form-control is-invalid') }}
+
+                            <div class="invalid-feedback">
+                                {% for error in form.email.errors %}
+                                    {{ error}}
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.email(class='form-control rounded-4') }}
+                        {% endif %}
+                    </div>
+                </fieldset>
+                {{ form.botaoSubmitEnviarEmail(class='btn btn-primary mt-2') }}
+            </form>
+                
+                
+            
+        </div>
+</div>
+
+{% endblock%}

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div class="container">
+    <hr>
+        <div class="row">
+            
+            <form method="POST" action="" class="border p-5 mt-2 rounded-4" enctype="multipart/form-data">
+                {{ form.csrf_token }}
+                <legend>Criar Post</legend>
+                <fieldset>
+                    <div class="form-group">
+                        {{ form.titulo.label(class='form-control-label ') }}
+                        {% if form.titulo.errors %}
+                            {{ form.titulo(class='form-control is-invalid') }}
+
+                            <div class="invalid-feedback">
+                                {% for error in form.titulo.errors %}
+                                    {{ error}}
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.titulo(class='form-control rounded-4') }}
+                        {% endif %}
+                    </div>
+                    <hr>
+
+                    <div class="form-group">
+                        {{ form.foto_post.label}}
+                        {{ form.foto_post(class='form-control-file')}}
+                        {% if form.foto_post.errors %}
+                            {% for error in form.foto_post.errors %}
+                                <pan class="text-danger">{{ error }}</pan>
+                                <br>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <hr>
+
+                    <div class="form-group">
+                        {{ form.corpo.label(class='form-control-label') }}
+                        {% if form.corpo.errors %}
+                            {{ form.corpo(class='form-control is-invalid') }}
+
+                            <div class="invalid-feedback">
+                                {% for error in form.corpo.errors %}
+                                    {{ error}}
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.corpo(class='form-control rounded-4') }}
+                        {% endif %}
+                    </div>
+                </fieldset>
+                {{ form.botaoSubmitCriarPost(class='btn btn-primary mt-2') }}
+            </form>
+                
+                
+            
+        </div>
+</div>
+
+{% endblock %}

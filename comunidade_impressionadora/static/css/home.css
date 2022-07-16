@@ -1,0 +1,302 @@
+/*======= VERSÃO PARA DESKTOP ================*/
+
+
+.container-pots {
+    display: initial;
+    
+}
+
+#Titulo-page {
+    color: orange;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#Sub-titulo-page {
+    color: orange;
+    font-size: 28px;
+    text-align: center;
+}
+
+#post-block {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+
+
+    width: 1300px;
+       
+    background-color: #f2f5f8;
+}
+
+#post-coluna1 {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-top: -120px;
+    margin-left: -40px;
+    
+    width: 330px;
+
+    
+}
+
+
+#post-coluna2 {
+    display: flex;
+    flex-direction: column;
+
+    align-items:center;
+    
+
+    margin-left: 120px;
+    width: 720px;
+
+
+    
+}
+
+#foto-autor-post {
+    display: inline-block;
+    width: 80px;
+    border-radius: 50%;
+    
+    
+}
+
+#nome-autor-post {
+
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: -50px;
+    margin-left: 85px;
+
+    text-align: start;
+}
+
+#data-post {
+    font-size: 15px;
+
+    margin-top: -5px;
+    margin-left: 85px;
+
+
+    margin-bottom: 15px;
+
+}
+
+#autor-cursos {
+    display: flex;
+
+    flex-direction: column;
+
+    font-size: 18px;
+    
+   
+    width: 295px;
+    height: 30px;
+
+    justify-content: center;
+
+    align-items: center;
+
+
+    background-color: rgb(93, 226, 137);
+    border-radius: 40px;
+    padding: 5px;
+}
+
+
+#image-post {
+    
+    width: 830px;
+   
+    border-radius: 20px;
+
+    
+}
+
+#titulo-post {
+    color :orange;
+
+    font-weight: bold;
+    font-size: 35px;
+    
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    text-align: justify;
+
+    border-bottom: 2px solid orange
+}
+
+#texto-post {
+    margin-top: 20px;
+    
+    text-align: justify;
+
+    font-size: 18px;
+    
+}
+
+/*======= VERSÃO PARA MOBILE ================*/
+
+@media (max-width: 450px) {
+
+
+    body {
+        display: initial;
+        width: initial;
+        justify-content: initial;
+        margin: initial;
+    }
+
+
+
+    .container-pots {
+        display: flex;
+
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    #Titulo-page {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    #Sub-titulo-page {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #post-block {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+
+
+        width: 350px;
+        
+   
+        
+        background-color: #f2f5f8;
+    }
+
+    #post-coluna1 {
+
+        margin-top: 2px;
+        margin-left: 15px;
+        
+        width: 330px;
+    
+
+        
+    }
+
+
+    #post-coluna2 {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+
+        width: 320px;
+
+        margin-left: -5px;
+    
+
+        
+    }
+
+    #foto-autor-post {
+        display: inline-block;
+        width: 50px;
+        border-radius: 50%;
+        
+    }
+
+    #nome-autor-post {
+
+        font-size: 17px;
+        font-weight: bold;
+        margin-top: -40px;
+        margin-left: 55px;
+
+        text-align: start;
+    }
+
+    #data-post {
+        font-size: 12px;
+
+        margin-top: -5px;
+        margin-left: 55px;
+
+        display: flex;
+    
+    }
+
+    #autor-cursos {
+        display: inline;
+        
+    
+        font-size: 10px;
+        
+       
+        width: 10px;
+        height: 20px;
+  
+
+        background-color: rgb(93, 226, 137);
+        border-radius: 40px;
+        padding: 5px;
+    }
+
+
+    #image-post {
+        
+        width: 330px;
+       
+        border-radius: 20px;
+
+        
+    }
+
+    #titulo-post {
+        color :orange;
+
+        font-weight: bold;
+        font-size: 25px;
+        
+        margin-top: 30px;
+        margin-bottom: 20px;
+
+        text-align: justify;
+
+        border-bottom: 2px solid orange
+    }
+
+    #texto-post {
+        margin-top: 20px;
+        
+        text-align: justify;
+
+        font-size: 13px;
+        
+    }
+
+   
+}

@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="container">
+        <h1>Faça Login ou Crie uma Conta para continuar</h1>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <form method="POST" action="" class="border p-5 mt-2">
+                    {{ formLogin.csrf_token }}
+                    <legend>Login</legend>
+                    <fieldset>
+                        <div class="form-group">
+                            {{ formLogin.email.label(class='form-control-label') }}
+
+                            {% if formLogin.email.errors %}
+                                {{ formLogin.email(class='form-control is-invalid') }}
+                                Criar Comentario
+                                <div class="invalid-feedback">
+                                    {% for error in formLogin.email.errors %}
+                                        {{ error}}
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ formLogin.email(class='form-control rounded-4') }}
+                            {% endif %}
+
+                            
+                        </div>
+                        <div class="form-group">                        
+                            {{ formLogin.senha.label(class='form-control-label') }}
+                            {% if formLogin.senha.errors %}
+                                {{ formLogin.senha(class='form-control is-invalid') }}
+
+                                <div class="invalid-feedback">
+                                    {% for error in formLogin.senha.errors %}
+                                        {{ error}}
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ formLogin.senha(class='form-control rounded-4') }}
+                            {% endif %}
+                        </div>
+                        <a href="{{ url_for('recuperarSenha') }}">Esqueceu a Senha</a>
+                        <div class="form-group">
+                            {{ formLogin.lembrarDados.label }}
+                            {{ formLogin.lembrarDados(class='form-check-input') }}
+                        </div>
+                    </fieldset>
+                    {{ formLogin.botaoSubmitLogin(class='btn btn-primary') }}
+                </form>
+                
+            </div>
+            <div class="col">
+                <form method="POST" action="" class="border p-5 mt-2">
+                    {{ formCriarConta.csrf_token }}
+                    <legend>Criar Conta</legend>
+                    <fieldset>
+                        <div class="form-group">
+                            {{ formCriarConta.username.label(class='form-control-label') }}
+                            {% if formCriarConta.username.errors %}
+                                {{ formCriarConta.username(class='form-control is-invalid') }}
+
+                                <div class="invalid-feedback">
+                                    {% for error in formCriarConta.username.errors %}
+                                        {{ error}}
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ formCriarConta.username(class='form-control rounded-4') }}
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            {{ formCriarConta.email.label(class='form-control-label') }}
+                            {% if formCriarConta.email.errors %}
+                                {{ formCriarConta.email(class='form-control is-invalid') }}
+
+                                <div class="invalid-feedback">
+                                    {% for error in formCriarConta.email.errors %}
+                                        {{ error}}
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ formCriarConta.email(class='form-control rounded-4') }}
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            {{ formCriarConta.senha.label(class='form-control-label') }}
+                            {% if formCriarConta.senha.errors %}
+                                {{ formCriarConta.senha(class='form-control is-invalid') }}
+
+                                <div class="invalid-feedback">
+                                    {% for error in formCriarConta.senha.errors %}
+                                        {{ error}}
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ formCriarConta.senha(class='form-control rounded-4') }}
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            {{ formCriarConta.confirmacaoSenha.label(class='form-control-label') }}
+                            {% if formCriarConta.confirmacaoSenha.errors %}
+                                {{ formCriarConta.confirmacaoSenha(class='form-control is-invalid') }}
+
+                                <div class="invalid-feedback">
+                                    {% for error in formCriarConta.confirmacaoSenha.errors %}
+                                        {{ error}}
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ formCriarConta.confirmacaoSenha(class='form-control rounded-4') }}
+                            {% endif %}
+                        </div>  
+                    </fieldset>
+                    {{ formCriarConta.botaoSubmitCriarConta(class='btn btn-primary mt-2') }}
+                </form>
+                
+                
+            </div>
+        </div>
+    </div>
+     
+{% endblock %}

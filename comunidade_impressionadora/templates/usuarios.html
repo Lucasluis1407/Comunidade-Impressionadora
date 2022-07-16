@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/usuarios.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        
+            
+            <div id="usuarios-pageblock">
+                <h1 id="titulo-page" >Usuários</h1>
+                {% for usuario in listaUsuarios %}
+                
+
+            
+                    <hr>
+
+                    <div >
+
+                        <div >
+                
+                            <div >
+                
+                                <div class="image">
+                                    <img id="user-fotoperfil" src="{{ url_for('static', filename='fotos_perfil/{}'.format(usuario.fotoPerfil)) }}"  >
+                                </div>
+                
+                            <div >
+                                
+                                <h4 id="user-username" >{{ usuario.username }}</h4>
+                                <h5 id="user-email" >{{ usuario.email }}</h5>
+                
+                                <div id="information-user">
+                
+                                    <div >
+                
+                                        <span >Cursos</span>
+                                        {% if 'Não informado' in usuario.cursos %}
+                                            <span >0</span>
+                                        {% else %}
+                                            <span >{{ usuario.cursos.count(';') + 1 }}</span>
+                                        {% endif %}
+
+                                    </div>
+                
+                                    <div >
+                
+                                        <span >Posts</span>
+                                        <span >{{current_user.contarPosts()}}</span>
+                                        
+                                    </div>
+                                    
+                                </div>
+                
+                
+                
+                            </div>
+                
+                                
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <div >
+                        <div >
+                            <strong id="titulo-cursos" >Cursos</strong><br>
+                            {% for curso in usuario.cursos.split(';') %}
+                                <h5 id="user-cursos" >{{ curso }}</h5>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        
+        
+    </div>
+{% endblock %}
